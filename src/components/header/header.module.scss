@@ -1,0 +1,24 @@
+@use "../../variables.scss" as mixin;
+
+.header {
+	margin: 1.5rem 0;
+
+	ul {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	li {
+		list-style: none;
+	}
+	a {
+		text-decoration: none;
+		color: mixin.$primaryTextColor;
+		font-size: 1.55rem;
+	}
+	.logo {
+		color: mixin.$secondaryColor;
+		font-size: 2.5rem;
+		font-weight: 700;
+	}
+}

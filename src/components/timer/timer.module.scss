@@ -1,0 +1,43 @@
+@use "../../variables.scss" as mixin;
+
+.countdown {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin: mixin.$spaceY;
+	font-weight: 700;
+
+	h1 {
+		font-size: mixin.$headingFontSize;
+	}
+
+	.time {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.digit_text {
+		display: flex;
+		flex-direction: column;
+		// justify-content: center;
+		align-items: center;
+	}
+
+	.digit {
+		font-size: 10rem;
+	}
+
+	.text {
+		font-size: 2rem;
+		text-transform: uppercase;
+	}
+
+	// 22280571@stu.omu.edu.tr
+
+	// span {
+	// 	font-size: 10rem;
+	// }
+}

@@ -1,0 +1,132 @@
+@use "../../variables.scss" as mixin;
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(28, 5, 50, 0.316);
+}
+
+.modal {
+	position: absolute;
+	top: 40px;
+	left: 40px;
+	right: 40px;
+	bottom: 40px;
+	background-color: rgb(247, 247, 249);
+	width: 80vw;
+	height: 80vh;
+	border-radius: 10px;
+	outline: none;
+}
+
+.modal_container {
+	display: flex;
+	justify-content: center;
+	// align-items: center;
+	flex-direction: column;
+	color: mixin.$primaryColor;
+
+	.competitor_info {
+		display: grid;
+		grid-template-columns: 1fr 3fr;
+		grid-gap: 10px;
+
+		.bio {
+			display: flex;
+			flex-direction: column;
+			// justify-content: center;
+			color: mixin.$primaryColor;
+
+			.divider {
+				display: flex;
+				flex-direction: column;
+				margin: 10px;
+				label {
+					font-size: 1.25rem;
+					font-weight: 500;
+				}
+				span {
+					font-size: 16px;
+					line-height: 28px;
+				}
+			}
+		}
+	}
+
+	.vote_container {
+		position: relative;
+		display: grid;
+		grid-template-columns: 1fr 3fr;
+
+		.vote_count {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			span {
+				font-size: 1.5rem;
+				font-weight: 500;
+				margin: 10px;
+			}
+
+			.vote_controls {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				button {
+					// width: 100%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					padding: 1rem;
+					background-color: mixin.$secondaryColor;
+
+					border: 0;
+					border-radius: 5px;
+					cursor: pointer;
+
+					.icon {
+						font-size: 1.5rem;
+					}
+				}
+				span {
+					font-size: 1.5rem;
+					font-weight: 500;
+				}
+			}
+		}
+
+		form {
+			padding: 1rem;
+			span {
+				color: mixin.$primaryColor;
+				font-size: 1.25rem;
+				font-weight: 500;
+			}
+
+			.form_control {
+				width: 100%;
+				height: 3rem;
+				margin: 0.75rem 0;
+				font-size: 1.25rem;
+				padding: 0.75rem;
+				border: 1px solid mixin.$secondaryColor;
+				border-radius: 5px;
+			}
+
+			button {
+				width: 100%;
+				height: 3rem;
+				background-color: mixin.$secondaryColor;
+				border: 0;
+				border-radius: 5px;
+				font-size: 1.25rem;
+				cursor: pointer;
+			}
+		}
+	}
+}
