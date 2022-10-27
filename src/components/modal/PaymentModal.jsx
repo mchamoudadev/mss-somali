@@ -41,7 +41,7 @@ function PaymentModal() {
 
 	const backgroundStyle = {
 		width: "100%",
-		height: "500px",
+		height: "400px",
 		background: `linear-gradient(0deg,#29ae65b2,rgba(0,0,0,0) 60%,rgba(0,0,0,0)),url(${currentCompetitor.Photo})`,
 		backgroundSize: "cover",
 		backgroundRepeat: "no-repeat",
@@ -87,7 +87,9 @@ function PaymentModal() {
 								<div className={styles.divider}>
 									<label>Backround</label>
 									<span>
-										{currentCompetitor && currentCompetitor.PersonalBackground}
+										{currentCompetitor &&
+											currentCompetitor.PersonalBackground.slice(0, 160) +
+												"..."}
 									</span>
 								</div>
 								<div className={styles.divider}>
